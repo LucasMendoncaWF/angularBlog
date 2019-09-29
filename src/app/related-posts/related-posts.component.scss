@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    width: calc(100% - 40px);
+    border: 2px solid rgb(238, 238, 238);
+    position: relative;
+    padding: 20px;
+    padding-top: 20px;
+    margin-top: 50px;
+
+    .related-title{
+        padding: 20px;
+        font-weight: 700;
+        position: absolute;
+        top: -32px;
+        left: 30px;        
+        background: white;
+    }
+}

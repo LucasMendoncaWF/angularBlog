@@ -1,0 +1,53 @@
+<h1>Contact us</h1>
+<div class="contact">
+  <div class="formulario">
+  <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+      <h5 *ngIf="success">Your form is valid!</h5>
+
+      <label>
+        Email:
+        <input type="text" formControlName="name">
+        <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+          <div *ngIf="messageForm.controls.name.errors.required" class="error-message">O campo é obrigatório</div>
+        </div>
+        <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+          <div *ngIf="messageForm.controls.name.errors.email" class="error-message">O e-mail inserido não é valido</div>
+        </div>
+      </label>
+    
+      <label>
+        Message:
+        <textarea formControlName="message"></textarea>
+        <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+          <div *ngIf="messageForm.controls.message.errors.required" class="error-message">Por favor, preencha o campo de mensagem</div>
+        </div>
+      </label>
+
+      <input type="submit" value="Send message" class="cta">
+    
+    </form>
+
+    <div *ngIf="submitted" class="results">
+      <strong>Name:</strong> 
+      <span>{{ messageForm.controls.name.value }}</span>
+
+      <strong>Message:</strong> 
+      <span>{{ messageForm.controls.message.value }}</span>
+    </div>
+  </div>
+  <div class="others-contacts">
+    <div class="contact-form">
+      Phone: (99)9999-9999
+    </div>
+    <div class="contact-form">
+      Phone 2: (99)9999-9999
+    </div>
+    <div class="contact-form">
+      E-mail: email@gmail.com
+    </div>
+    <div class="contact-form">
+      Address: Example Street 99, ExCity.
+    </div>
+  </div>
+</div>

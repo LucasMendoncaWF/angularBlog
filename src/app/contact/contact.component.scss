@@ -1,0 +1,76 @@
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+
+    .formulario{
+        width: 40%;
+        margin-right: 10%;
+
+        label {
+            display: block;
+            
+            input, textarea {
+                display: block;
+                width: calc(100% - 2em - 2px);
+                margin-bottom: 20px;
+                padding: 1em;
+                resize: none;
+                font-family: arial;
+                font-size: 15px;
+            }
+
+            .error {
+                margin-top: -20px;
+                display: inline-block;
+                font-size: .9em;
+                margin-bottom: 20px;
+
+                .error-message{
+                    background: #f55959;
+                    color: white;
+                    padding: .5em;
+                }
+            }
+        }
+
+        .cta {
+            background: #7700FF;
+            border: none;
+            color: white;
+
+            text-transform: uppercase;
+            border-radius: 4px;
+            padding: 1em;
+            cursor: pointer;
+            font-family: 'Montserrat';
+        }
+
+        .results {
+            margin-top: 50px;
+
+            strong {
+                display: block;
+            }
+            span {
+                margin-bottom: 20px;
+                display: block;
+            }
+        }
+    }
+
+    .others-contacts{
+        width: 50%;
+
+        .contact-form{
+            margin: 15px;
+            width: calc(100% - 30px);
+            font-size: 25px;
+            text-align: right;
+        }
+    }
+}
+
+:host{
+    width: 100%;
+}

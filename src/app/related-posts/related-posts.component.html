@@ -1,0 +1,6 @@
+<ul *ngIf="relatedPosts">
+    <div class="related-title">Related Posts</div>
+    <li *ngFor="let post of relatedPosts">
+        <app-post-miniature [title]="post.Title" [img]="post.Img" [desc]="post.Desc"></app-post-miniature>
+    </li>
+</ul>

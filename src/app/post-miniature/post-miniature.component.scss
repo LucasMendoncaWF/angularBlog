@@ -1,0 +1,45 @@
+.post-miniature{
+    width: calc(100% - 54px);
+    border: 2px solid rgb(238, 238, 238);
+    padding: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: white;
+
+    .post-miniature-title{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .post-miniature-desc{
+        text-align: justify;
+        font-size: 14px;
+        overflow: hidden;
+        height: 110px;
+        text-overflow: ellipsis; 
+        position: relative;
+    }
+
+    .post-miniature-img{
+        width: 100%;
+        border: 2px solid rgb(238, 238, 238);
+        height: 100px;
+        margin-bottom: 25px;
+        position: relative;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &:hover{
+        transform: scale(1.14);
+    }
+}
+
+:host{
+    width: 100%;
+}
