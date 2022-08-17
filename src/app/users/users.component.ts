@@ -8,7 +8,7 @@ import {DataService} from '../data.service';
 })
 export class UsersComponent implements OnInit {
 
-  users: Object;
+  users: any;
 
   constructor(private data: DataService) { }
 
