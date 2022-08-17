@@ -1,33 +1,37 @@
 .actual-post-area{
-    width: calc(100% - 130px);
-    margin-right: 100px;
-    margin-left: 0;
+  width: calc(100% - 130px);
+  margin-right: 100px;
+  margin-left: 0;
 
-    .post-title{
-        font-size: 28px;
-        font-weight: 900;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 60px;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+
+  .post-title{
+    font-size: 28px;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .post-paragraph{
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: justify;
+
+    .post-img-small{  
+      width: 30%;
+      float: left;
+      margin: 20px;
     }
+  }
 
-    .post-paragraph{
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: justify;
-
-        .post-img-small{  
-            width: 30%;
-            float: left;
-            margin: 20px;
-        }
-    }
-
-    .post-img-big{  
-        width: 100%;
-    }
+  .post-img-big{  
+    width: 100%;
+  }
 }
 
 :host{
-    width: 100%;
+  width: 100%;
 }
